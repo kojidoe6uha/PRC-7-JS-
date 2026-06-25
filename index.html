@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио – генерация, фильтры, поиск</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Моё портфолио</h1>
+    <div class="header-controls">
+      <button id="theme-toggle" aria-label="Переключить тему">🌙</button>
+      <button class="burger" id="burger-btn" aria-label="Открыть меню">☰</button>
+    </div>
+    <nav>
+      <a href="#" class="active">Главная</a>
+      <a href="#projects">Проекты</a>
+      <a href="#about">Обо мне</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <!-- Секция проектов (динамическая) -->
+  <section id="projects" class="projects">
+    <h2>Мои проекты</h2>
+    <div class="controls">
+      <div class="filters">
+        <button data-filter="all" class="active">Все</button>
+        <button data-filter="frontend">Frontend</button>
+        <button data-filter="backend">Backend</button>
+        <button data-filter="design">Дизайн</button>
+      </div>
+      <input type="text" id="search-input" placeholder="Поиск проекта..." />
+    </div>
+    <div class="projects-grid" id="projects-grid"></div>
+  </section>
+
+  <!-- Секция "Обо мне" -->
+  <section id="about" class="about">
+    <h2>Обо мне</h2>
+    <p>Краткая информация обо мне. Нажмите кнопку, чтобы узнать больше.</p>
+    <div class="extra-info" id="extra-info">
+      <p>Дополнительный текст о себе, который раскрывается по клику. Здесь можно рассказать о навыках, увлечениях или опыте работы.</p>
+    </div>
+    <button id="toggle-btn">Показать больше</button>
+  </section>
+
+  <!-- Секция контактов -->
+  <section id="contact" class="contact">
+    <h2>Свяжитесь со мной</h2>
+    <form id="contact-form">
+      <label for="name">Имя</label>
+      <input type="text" id="name" name="name" placeholder="Ваше имя" />
+      <span class="error" id="name-error"></span>
+
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="example@mail.ru" />
+      <span class="error" id="email-error"></span>
+
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Все права защищены</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
